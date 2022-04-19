@@ -1,0 +1,43 @@
+@import url("../rewrite-antd-css/rewrite-antd.css");
+.wrap{
+  margin: 0 5px;
+}
+#footer{
+  padding: 24px 0;
+}
+#header{
+  padding: 0;
+}
+.logo{
+  margin: 0;
+  text-align: center;
+}
+@media all and (min-width: 576px) {
+  .wrap{
+    margin: 0 10px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .wrap{
+    margin: 0 15px;
+  }
+}
+@media all and (min-width: 992px) {
+  .wrap{
+    margin: 0 20px;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .wrap{
+    width: 980px;
+    margin: 0 auto;
+  }
+}
+
+@media all and (min-width: 1600px) {
+  .wrap{
+    width: 1200px;
+  }
+}

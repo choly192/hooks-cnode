@@ -1,14 +1,17 @@
 import * as React from "react";
-// import { Switch, Route } from "react-router-dom";
+import { useRoutes } from "react-router-dom";
 import { Layout } from "antd";
 import { Footer, Header } from "./component";
+import { router } from "./route";
+import "./static/css/common.css";
 
 function App() {
+  const element = useRoutes(router);
   return (
     <Layout>
       <Header />
       <Layout.Content>
-        <div className="wrap">content</div>
+        <div className="wrap">{element}</div>
       </Layout.Content>
       <Footer />
     </Layout>
