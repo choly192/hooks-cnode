@@ -33,7 +33,7 @@ const router = [
     element: <About />,
   },
   {
-    path: "",
+    path: "*",
     exact: false,
     element: <Page404 />,
   },
@@ -57,4 +57,37 @@ const navigationList = [
   },
 ];
 
-export { router, navigationList };
+const homeSecondaryNavigation = [
+  {
+    text: "全部",
+    path: "/?tab=all",
+    key: "all",
+  },
+  {
+    text: "精华",
+    path: "/?tab=good",
+    key: "good",
+  },
+  {
+    text: "分享",
+    path: "/?tab=share",
+    key: "share",
+  },
+  {
+    text: "问答",
+    path: "/?tab=ask",
+    key: "ask",
+  },
+  {
+    text: "招聘",
+    path: "/?tab=job",
+    key: "job",
+  },
+  {
+    text: "客户端测试",
+    path: "/?tab=dev",
+    key: "dev",
+  },
+];
+
+export { router, navigationList, homeSecondaryNavigation };

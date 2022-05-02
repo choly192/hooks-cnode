@@ -1,4 +1,9 @@
 @import url("../rewrite-antd-css/rewrite-antd.css");
+
+html,body,#root{
+  height: 100%;
+}
+
 .wrap{
   margin: 0 5px;
 }
@@ -12,6 +17,16 @@
   margin: 0;
   text-align: center;
 }
+
+.wrap .topics-list{
+  background-color: #fff;
+  padding: 0 15px;
+}
+
+.one-hundred-percent{
+  height: 100%;
+}
+
 @media all and (min-width: 576px) {
   .wrap{
     margin: 0 10px;

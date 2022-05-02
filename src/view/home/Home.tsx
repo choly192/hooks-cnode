@@ -1,7 +1,17 @@
 import React, { FC } from "react";
+import { useSearchParams } from "react-router-dom";
+import { SecondaryNavigation } from "./SecondaryNavigation";
+import { TopicList } from "@/component";
 interface HomeProps {}
 const Home: FC<HomeProps> = (props) => {
-  return <div>首页</div>;
+  // const [searchParams, setSearchParams] = useSearchParams();
+  // console.log(searchParams.get("tab"));
+  return (
+    <div>
+      <SecondaryNavigation />
+      <TopicList data={[]} loading={true} />
+    </div>
+  );
 };
 
 export default Home;

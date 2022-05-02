@@ -8,7 +8,7 @@ import "./static/css/common.css";
 function App() {
   const element = useRoutes(router);
   return (
-    <Layout>
+    <Layout className="one-hundred-percent">
       <Header />
       <Layout.Content>
         <div className="wrap">{element}</div>

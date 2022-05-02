@@ -6,7 +6,8 @@ import { Link } from "react-router-dom";
 const Header: FC = () => {
   const { pathname } = useLocation();
   const currentKey =
-    navigationList.find((nav) => nav.path === pathname)?.key ?? "/";
+    navigationList.find((nav) => nav.path === pathname)?.key ??
+    "CNODE_HOMEPAGE";
   return (
     <Affix offsetTop={0}>
       <Layout.Header id="header">
