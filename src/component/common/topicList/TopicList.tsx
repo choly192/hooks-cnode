@@ -4,6 +4,7 @@ import { UserOutlined } from "@ant-design/icons";
 import { TopicsListModule } from "@/hooks/module/topic.type";
 import { Link } from "react-router-dom";
 import { TopicCategory } from "./TopicCategory";
+import { fromNowDate } from "@/utils/utils";
 
 export interface TopicListProps {
   data: TopicsListModule[];
@@ -35,7 +36,9 @@ export const TopicList: FC<TopicListProps> = (props) => {
               <Link to={`/topics/${item?.id}`}>{item?.title}</Link>
             </Col>
             {/* 内容 */}
-            <Col xs={0} md={4}></Col>
+            <Col xs={0} md={4}>
+              {fromNowDate(item?.last_reply_at)}
+            </Col>
           </List.Item>
         );
       }}
