@@ -8,14 +8,12 @@ import { fromNowDate } from "@/utils/utils";
 
 export interface TopicListProps {
   data: TopicsListModule[];
-  loading: boolean;
 }
 
 export const TopicList: FC<TopicListProps> = (props) => {
   return (
     <List
       className="topics-list"
-      loading={props?.loading}
       dataSource={props?.data}
       renderItem={(item) => {
         return (
@@ -47,7 +45,7 @@ export const TopicList: FC<TopicListProps> = (props) => {
 };
 TopicList.displayName = "TopicList";
 
-const getTab = (top: boolean, good: boolean, tab: string) => {
+export const getTab = (top?: boolean, good?: boolean, tab = "") => {
   if (top) return "top";
 
   if (good) return "good";

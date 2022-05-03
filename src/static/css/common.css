@@ -1,7 +1,7 @@
 @import url("../rewrite-antd-css/rewrite-antd.css");
 
 html,body,#root{
-  height: 100%;
+  min-height: 100%;
 }
 
 .wrap{
@@ -9,6 +9,7 @@ html,body,#root{
 }
 #footer{
   padding: 24px 0;
+  text-align: center;
 }
 #header{
   padding: 0;
@@ -39,6 +40,10 @@ html,body,#root{
 }
 .pagination-container > ul {
   margin: auto;
+}
+
+.topic-detail .ant-card {
+  margin-top: 10px;
 }
 
 @media all and (min-width: 576px) {

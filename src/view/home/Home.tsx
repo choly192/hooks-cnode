@@ -29,7 +29,7 @@ const Home: FC<HomeProps> = (props) => {
   return (
     <div>
       <SecondaryNavigation />
-      <TopicList data={data} loading={loading} />
+      {data?.length > 0 && <TopicList data={data} />}
       {!loading && (
         <PaginationComp
           currentPage={+currentPage}

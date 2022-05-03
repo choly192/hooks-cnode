@@ -18,11 +18,7 @@ const Header: FC = () => {
             </h1>
           </Col>
           <Col xs={18} sm={20} md={22}>
-            <Menu
-              mode="horizontal"
-              theme="dark"
-              defaultSelectedKeys={[currentKey]}
-            >
+            <Menu mode="horizontal" theme="dark" selectedKeys={[currentKey]}>
               {navigationList.map((item) => (
                 <Menu.Item key={item.key}>
                   <Link to={item.path}>{item.text}</Link>
