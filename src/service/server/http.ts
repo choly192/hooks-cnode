@@ -1,4 +1,3 @@
-import { config } from "process";
 import HttpRequest from "../httpRequest";
 
 const BASE_URL = "https://cnodejs.org/api/v1";

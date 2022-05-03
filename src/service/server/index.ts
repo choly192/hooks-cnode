@@ -12,12 +12,13 @@ interface CommonResponse<T> {
   data: T;
 }
 
-const serverRequest = <D, T = any>(data: CommonRequestConfig<D>) => {
-  const { method = "GET" } = data;
+const serverRequest = <D, T = any>(options: CommonRequestConfig<D>) => {
+  const { method = "GET" } = options;
   if (method.toUpperCase() === "GET") {
-    data.params = data.data;
+    options.params = options.data;
+    options.url = options.url;
   }
-  return http.request<CommonResponse<T>>(data);
+  return http.request<CommonResponse<T>>(options);
 };
 
 export { serverRequest };

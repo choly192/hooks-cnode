@@ -1,8 +1,8 @@
 import { createStore, combineReducers } from "redux";
-import topics from "./reducer/topics";
+import { topicsReducer } from "./reducer/topicsReducer";
 
 export default createStore(
   combineReducers({
-    topics,
+    topicsReducer,
   })
 );
