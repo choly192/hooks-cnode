@@ -8,7 +8,7 @@ import { useLocation } from "react-router";
 export interface SecondaryNavigationProps {}
 
 export const SecondaryNavigation: FC<SecondaryNavigationProps> = (props) => {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const navigate = useNavigate();
   const { search } = useLocation();
   const { tab, page } = qs.parse(search.substring(1));
@@ -18,8 +18,8 @@ export const SecondaryNavigation: FC<SecondaryNavigationProps> = (props) => {
   useEffect(() => {
     if (
       (tab && !tabKeyArr) ||
-      (typeof page === "number" && page <= 0) ||
-      (typeof page !== "number" && page !== undefined)
+      (typeof page === "string" && parseInt(page) <= 0) ||
+      (typeof page === "string" && isNaN(parseInt(page)))
     ) {
       navigate("/404");
     }

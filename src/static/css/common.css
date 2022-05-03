@@ -31,6 +31,16 @@ html,body,#root{
   margin: 0 5px;
 }
 
+.pagination-container{
+  border-top: 1px solid #f0f0f0;
+  padding: 10px 5px; 
+  background: #fff;
+  display: flex;
+}
+.pagination-container > ul {
+  margin: auto;
+}
+
 @media all and (min-width: 576px) {
   .wrap{
     margin: 0 10px;
