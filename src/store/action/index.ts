@@ -1,5 +1,5 @@
 // define create action
-import { LoadingStatus } from "../actionType";
+import { LoadingStatus, UserLoadStatus } from "../actionType";
 
 // 主题列表
 export const topicsACT = <T>(
@@ -26,5 +26,19 @@ export const topicDetailACT = <T>(
     data,
     type,
     errorMessage,
+  };
+};
+
+// user detail
+export const userDetailACT = <T>(
+  data: T,
+  type: UserLoadStatus
+): {
+  data: T;
+  type: string;
+} => {
+  return {
+    data,
+    type,
   };
 };
