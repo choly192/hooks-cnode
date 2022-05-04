@@ -16,7 +16,7 @@ const serverRequest = <D, T = any>(options: CommonRequestConfig<D>) => {
   const { method = "GET" } = options;
   if (method.toUpperCase() === "GET") {
     options.params = options.data;
-    options.url = options.url;
+    // options.url = options.url;
   }
   return http.request<CommonResponse<T>>(options);
 };
